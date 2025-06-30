@@ -17,8 +17,9 @@
 # specify the BASE_DISTRO. This should hopefully prevent accidentally using
 # a default, when another distro was desired.
 ARG BASE_DISTRO=SPECIFY_ME
+ARG TARGETPLATFORM
 
-FROM crops/yocto:$BASE_DISTRO-base
+FROM ghcr.io/boyvanduuren/yocto-dockerfiles:$BASE_DISTRO-base
 
 USER root
 
